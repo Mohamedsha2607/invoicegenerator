@@ -1,0 +1,10 @@
+{% if weather_data %}
+	{% for data in weather_data %}
+		<div>
+			<h2>{{ data.city }}</h2>
+			<p>Temperature: {{ data.temperature }}&deg;C</p>
+			<p>Description: {{ data.description }}</p>
+			<img src="{{ data.icon_url }}" alt="{{ data.description }}">
+		</div>
+	{% endfor %}
+{% endif %}
